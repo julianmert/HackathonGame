@@ -1,0 +1,10 @@
+names,attack values,speed,health,types
+Charmander,6,Fast,40,Fire
+Vulpix,8,SuperFast,35,Fire
+Lurantis,6,SuperFast,40,Grass
+Squirtle,6,Medium,48,Water
+Pidgey,10,Medium,44,
+Mr Mime,10,Medium,42,
+Bulbasaur,14,SuperSlow,66,Grass
+Volcanion,16,SuperSlow,58,Fire
+Gyarados,18,Slow,50,Water
