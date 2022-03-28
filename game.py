@@ -33,17 +33,18 @@ class Game:
         player_2 = self._create_player('Player 2')
 
         print('\n\n')
-        self._display_pokemon_options()
-        pokemon_choice = int(input(self.delay_print(f'\n{player_1.name} choose your pokemon: ')))
-        player_1.add_pokemon(self._available_pokemon[pokemon_choice-1])
+        self._configure_player(player_1)
 
         print('\n\n')
-        self._display_pokemon_options()
-        pokemon_choice = int(input(self.delay_print(f'\n{player_2.name} choose your pokemon: ')))
-        player_2.add_pokemon(self._available_pokemon[pokemon_choice-1])
-        
+        self._configure_player(player_2)
+
         print('\n')
         self._battle(player_1, player_2)
+
+    def _configure_player(self, player):
+        self._display_pokemon_options()
+        pokemon_choice = int(input(self.delay_print(f'\n{player.name} choose your pokemon: ')))
+        player.add_pokemon(self._available_pokemon[pokemon_choice - 1])
 
     def _create_player(self, player):
         name = input(self.delay_print(f'\n{player} enter your name: '))

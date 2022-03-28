@@ -2,6 +2,7 @@ import random
 import sys
 import time
 
+
 class Pokemon:
     def __init__(self, name, attack_value, speed_value, health):
         self.name = name
