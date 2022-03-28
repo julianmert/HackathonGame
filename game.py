@@ -29,7 +29,8 @@ class Game:
         return available_pokemon
 
     def run(self):
-        player_1, player_2 = self._create_players()
+        player_1 = self._create_player('Player 1')
+        player_2 = self._create_player('Player 2')
 
         print('\n\n')
         self._display_pokemon_options()
@@ -43,11 +44,6 @@ class Game:
         
         print('\n')
         self._battle(player_1, player_2)
-
-    def _create_players(self):
-        player_1 = self._create_player('Player 1')
-        player_2 = self._create_player('Player 2')
-        return player_1, player_2
 
     def _create_player(self, player):
         name = input(self.delay_print(f'\n{player} enter your name: '))
